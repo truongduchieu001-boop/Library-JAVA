@@ -1,0 +1,82 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram id="diagram-1" name="Page-1">
+    <mxGraphModel dx="1615" dy="955" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="SƠ ĐỒ KIẾN TRÚC DỰ ÁN SPRING BOOT" style="text;html=1;align=center;verticalAlign=middle;fontSize=24;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="370" y="30" width="820" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="client" value="CLIENT / FRONTEND / POSTMAN / SWAGGER" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="520" y="110" width="500" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="controller" value="CONTROLLER&lt;br&gt;&lt;font style=&#39;font-size:12px;font-weight:normal&#39;&gt;Nhận HTTP request, validate DTO, trả HTTP response&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="520" y="230" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="service" value="SERVICE&lt;br&gt;&lt;font style=&#39;font-size:12px;font-weight:normal&#39;&gt;Xử lý nghiệp vụ, @Transactional, Dependency Injection&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="520" y="380" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="repository" value="REPOSITORY&lt;br&gt;&lt;font style=&#39;font-size:12px;font-weight:normal&#39;&gt;Spring Data JPA, truy vấn dữ liệu&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="520" y="530" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="database" value="MICROSOFT SQL SERVER 2022&lt;br&gt;&lt;font style=&#39;font-size:12px;font-weight:normal&#39;&gt;library_management&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="520" y="680" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="client" target="controller" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="controller" target="service" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="service" target="repository" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" parent="1" source="repository" target="database" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="dto" value="DTO&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;request / response&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="170" y="235" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mapper" value="MAPPER&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Entity ↔ DTO&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="170" y="385" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="validation" value="VALIDATION&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;@Valid, Bean Validation&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="170" y="530" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="exception" value="GLOBAL EXCEPTION HANDLER&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Xử lý lỗi tập trung&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="1130" y="230" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="config" value="CONFIG&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Swagger / OpenAPI&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="385" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="entity" value="ENTITY + ENUM&lt;br&gt;&lt;font style=&#39;font-size:11px&#39;&gt;Ánh xạ bảng và trạng thái&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=13;align=left;verticalAlign=middle;" parent="1" vertex="1">
+          <mxGeometry x="1130" y="530" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="a10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" parent="1" source="dto" target="controller" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" parent="1" source="mapper" target="service" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" parent="1" source="exception" target="controller" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="a15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;" parent="1" source="entity" target="repository" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6GhhdXZHevE8PgWZWEcs-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="validation" target="controller">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="410" y="525" as="sourcePoint" />
+            <mxPoint x="540" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6GhhdXZHevE8PgWZWEcs-2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=open;endFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1.001;entryY=0.618;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="config" target="controller">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1030" y="355" as="sourcePoint" />
+            <mxPoint x="1160" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
