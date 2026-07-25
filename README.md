@@ -227,7 +227,7 @@ API lấy danh sách sách:
 GET http://localhost:8080/api/books
 ```
 
-## 9. API đã có trong source khung
+## 9. API hiện có
 
 ```text
 POST   /api/books
@@ -235,6 +235,12 @@ GET    /api/books
 GET    /api/books/{id}
 PUT    /api/books/{id}
 DELETE /api/books/{id}
+
+POST   /api/readers
+GET    /api/readers
+GET    /api/readers/{id}
+PUT    /api/readers/{id}
+DELETE /api/readers/{id}
 ```
 
 API danh sách hỗ trợ tìm kiếm và phân trang:
@@ -251,13 +257,14 @@ GET /api/books?keyword=Java&page=0&size=10&sort=title,asc
 - Source Spring Boot đặt đúng tại thư mục gốc repository.
 - Kiến trúc Controller – Service – Repository.
 - Entity, DTO, Mapper, Validation và Global Exception Handler.
-- CRUD REST API mẫu cho `Book`.
+- CRUD REST API cho `Book` và `Reader`.
 - Swagger/OpenAPI.
 - Docker Compose cho SQL Server 2022.
 
 Đang phát triển:
 
 - CRUD Category, Author, Publisher và BookCopy.
+- Nghiệp vụ mượn – trả sách.
 - Quản lý Reader và User.
 - Nghiệp vụ Borrow/Return dùng `@Transactional`.
 - Fine, Reservation và phân quyền.

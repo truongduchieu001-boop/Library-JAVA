@@ -15,7 +15,7 @@ Service - xử lý nghiệp vụ, transaction
 Repository - Spring Data JPA
                    |
                    v
-MySQL Database
+Microsoft SQL Server 2022
 ```
 
 Các thành phần phụ:

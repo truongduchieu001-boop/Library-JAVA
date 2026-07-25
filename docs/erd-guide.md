@@ -48,5 +48,5 @@ NN: Not Null
 Tên cột, kiểu dữ liệu và khóa ngoại lấy trực tiếp từ file:
 
 ```text
-database/library_management_group18.sql
+database/library_management_sqlserver2022.sql
 ```

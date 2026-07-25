@@ -31,7 +31,8 @@ public class Book extends BaseEntity {
     @Column(name = "page_count")
     private Integer pageCount;
 
-    @Column(columnDefinition = "TEXT")
+    @Lob
+    @Column(columnDefinition = "VARCHAR(MAX)")
     private String description;
 
     @ManyToMany(fetch = FetchType.LAZY)

@@ -10,7 +10,8 @@ import java.time.LocalDate;
 public class Author extends BaseEntity {
     @Column(nullable = false, length = 150)
     private String name;
-    @Column(columnDefinition = "TEXT")
+    @Lob
+    @Column(columnDefinition = "VARCHAR(MAX)")
     private String biography;
     @Column(name = "date_of_birth")
     private LocalDate dateOfBirth;
